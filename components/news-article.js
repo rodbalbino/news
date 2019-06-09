@@ -14,13 +14,11 @@ class NewsArticle extends HTMLElement {
                 h2 {
                  font-family: Georgia, 'Times New Roman', Times, serif;
                 }
-
                 a,
                 a:visited {
                     text-decoration: none;
                     color: inherit;
                 }
-
                 img {
                     width: 100%;
                 }

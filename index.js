@@ -1,8 +1,9 @@
-import './news-article.js';
+import './components/news-article.js';
 import { topHeadlinesUrl } from './newsApi.js';
 
 window.addEventListener('load', () => {
     fetchNews();
+    registerSW();
 });
 
 async function fetchNews() {
@@ -16,5 +17,15 @@ async function fetchNews() {
         el.article = article;
         main.appendChild(el);
     });
+}
+
+async function registerSW() {
+    if ('serviceWorker' in navigator) {
+        try {
+            await navigator.serviceWorker.register('./sw.js');
+        } catch (e) {
+            console.log(`SW registration failed`);
+        }
+    }
 }
 
