@@ -23,15 +23,23 @@ class NewsArticle extends HTMLElement {
                 img {
                     width: 100%;
                 }
+                
+                @media screen and (max-width: 600px) {
+                  .container{
+                    padding: 0 20px;
+                  }
+                }
    
             </style>
+            <div class="container">
                 <a href="${article.url}" target="_blank">
                     <h2>${article.title}</h2>
                     <img src="${article.urlToImage || ""}" alt="${
       article.title
     }">
                     <p>${article.description || ""}</p>
-                </a>`;
+                </a>
+              </div>`;
   }
 }
 
