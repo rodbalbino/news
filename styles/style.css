@@ -12,7 +12,7 @@ header {
   justify-content: space-between; */
   align-items: center;
   flex-wrap: wrap;
-  background-color: #00b5f9;
+  /* background-color: #00b5f9; */
 }
 
 body h1 {
@@ -45,10 +45,10 @@ main {
 }
 
 .footer {
-  background: #00b5f9;
+  /* background: #00b5f9; */
   color: #36313d;
   text-align: center;
-  padding: 20px;
+  padding: 60px;
 }
 
 /* Add a black background color to the top navigation bar */
@@ -74,7 +74,7 @@ main {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #816697;
+  background-color: #00b5f9;
   color: black;
 }
 
@@ -110,7 +110,7 @@ main {
   }
 
   hr {
-    margin: 10px 50px;
+    margin: 10px 20px;
   }
 }
 
