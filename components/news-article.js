@@ -1,18 +1,19 @@
 class NewsArticle extends HTMLElement {
+  constructor() {
+    super();
+    this.root = this.attachShadow({ mode: "open" });
+  }
 
-    constructor() {
-        super();
-        this.root = this.attachShadow({ mode: 'open' });
-    }
-
-    /**
-     * @param {{ url: any; title: any; urlToImage: any; description: any; }} article
-     */
-    set article(article) {
-        this.root.innerHTML = `
+  /**
+   * @param {{ url: any; title: any; urlToImage: any; description: any; }} article
+   */
+  set article(article) {
+    this.root.innerHTML = `
             <style>
                 h2 {
-                 font-family: Georgia, 'Times New Roman', Times, serif;
+                
+                 font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI";
+
                 }
                 a,
                 a:visited {
@@ -22,14 +23,16 @@ class NewsArticle extends HTMLElement {
                 img {
                     width: 100%;
                 }
+   
             </style>
-            <a href="${article.url}">
-                <h2>${article.title}</h2>
-                <img src="${article.urlToImage || ''}">
-                <p>${article.description || ''}</p>
-            </a>`;
-    }
-
+                <a href="${article.url}" target="_blank">
+                    <h2>${article.title}</h2>
+                    <img src="${article.urlToImage || ""}" alt="${
+      article.title
+    }">
+                    <p>${article.description || ""}</p>
+                </a>`;
+  }
 }
 
-customElements.define('news-article', NewsArticle);
+customElements.define("news-article", NewsArticle);
