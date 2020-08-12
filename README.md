@@ -14,6 +14,6 @@ For my local tests I also used [http-server](https://www.npmjs.com/package/http-
 ## Mobile version
 ![Screenshot](images/modile_sample.png)
 
-# Licensing
+## Licensing
 This project is licensed under Unlicense license. This license does not require
 you to take the license with you to your project.
